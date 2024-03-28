@@ -9,9 +9,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
-public class AppClient {
+public class ClientApp {
 
-    private static final Logger log = LoggerFactory.getLogger(AppClient.class);
+    private static final Logger log = LoggerFactory.getLogger(ClientApp.class);
 
     private static final String SERVER_HOST = "localhost";
     private static final int SERVER_PORT = 9000;
@@ -44,6 +44,6 @@ public class AppClient {
             TimeUnit.MILLISECONDS.sleep(1000);
         }
         channel.shutdown();
-        log.info("Client completed work");
+        log.info("request completed");
     }
 }

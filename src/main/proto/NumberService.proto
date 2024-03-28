@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.generated.grpc;
+
+option java_multiple_files = true;
+
+message NumberRequest {
+  int32 firstValue = 1;
+  int32 lastValue = 2;
+}
+
+
+message NumberResponse {
+  int32 value = 1;
+}
+
+service NumberService{
+  rpc numberSequence(NumberRequest)
+      returns (stream NumberResponse){
+  };
+}
